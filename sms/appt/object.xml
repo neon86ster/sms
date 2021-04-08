@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<object>
+<table value="cms">
+	<l_employee useTable="yes">
+		<field name="emp_id" type="int" formname="Employee ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="emp_code" formname="Employee Code" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_fname" formname="First Name" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_lname" formname="Last Name" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_nickname" formname="Nick Name" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_birthday" formname="Birthday" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_id_num" formname="ID Number" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_department_id" prior="*" type="int" formname="Department" formtype="select" table="l_employee_department" refresh="yes" first="---select---" defaultvalue="__post" />
+		<field name="branch_id" prior="*" type="int" formname="Branch name" formtype="select" table="bl_branchinfo" refresh="yes" first="---select---" defaultvalue="__post" />
+		<field name="city_id" prior="*" type="int" formname="City name" formtype="select" table="al_city" refresh="yes" first="---select---" defaultvalue="__post" />
+		<field name="emp_phonehome" formname="Phone Home" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_phonemobile" formname="Mobile" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_startdate" formname="Start Date" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_misc_info" formname="Misc info." type="string" formtype="textarea" cols="40" defaultvalue="__post" rows="4" showinform="yes"/>
+		<field name="l_lu_user" type="string" formname="Add by" formtype="hidden" showinList="yes" defaultvalue="thisuser"/>
+        <field name="l_lu_date" type="int" formname="Add time" formtype="hidden" defaultvalue="thistime"/>
+		<field name="l_lu_ip" type="int" formname="Add ip" formtype="hidden" defaultvalue="thisip"/>
+		<field name="emp_active" type="int" formname="Enable" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		
+		<namefield name="emp_nickname"/>
+		<idfield name="emp_id"/>
+		<wherefield name="emp_department_id" value="3"/>
+		<showpage value="15"/>
+	</l_employee>	
+	<m_membership useTable="yes" setdateForm="no" action="add_membershipinfo.php">
+		<field name="member_id" type="int" formname="Member Id" formtype="hidden" showinform="yes" showinformAdd="no" showinList="no" defaultvalue="__post" />
+		<field name="member_code" prior="*" type="int" formname="Member Code" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post" />
+		<field name="expired" type="int" formname="Active" formtype="hidden" showinform="yes" showinList="yes" defaultvalue="__post" showinformAdd="no"/>
+		<field name="fname" prior="*" type="string" formname="First Name" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post" />
+		<field name="mname" type="string" formname="Middle Name" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post" />
+		<field name="lname" prior="*" type="string" formname="Last Name" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post" />
+		<field name="category_id" prior="*" type="int" formname="Category" defaultvalue="__post" showinform="yes"  formtype="select" table="mb_category" refresh="yes" first="---select---" />
+		<field name="sex_id" prior="*" type="int" formname="Sex" defaultvalue="__post" showinform="yes"  formtype="select" table="dl_sex" first="---select---" />
+		<field name="nationality_id" prior="*" type="int" formname="Nationality" showinform="yes" defaultvalue="__post"  formtype="select" table="dl_nationality"/>
+		<field name="joindate" type="date" formname="Sign Date" prior="*" formtype="date" showinform="yes" showinList="yes" defaultvalue="__post" />
+		<field name="expireddate" prior="*" type="date" formname="Expired Date" formtype="date" showinform="yes" showinList="yes" defaultvalue="__post" initialvalue="Unlimited" reset="yes"/>
+		<field name="birthdate" type="date" formname="Birth Day" formtype="date" showinform="yes" showinList="yes" defaultvalue="__post" initialvalue="" />
+		<field name="address" prior="*" type="string" formname="Address" formtype="textarea" cols="20" rows="4" showinform="yes" showinList="yes" defaultvalue="__post" />
+		<field name="city" prior="*" type="string" formname="City" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post" />
+		<field name="state" prior="*" type="string" formname="State" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post" />
+		<field name="zipcode" prior="*" type="string" formname="Zipcode" formtype="text" maxlength="5" showinform="yes" showinList="yes" defaultvalue="__post" />
+		<field name="phone" prior="*"  type="string" formname="Phone" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post" javascript="checkPhone(this)"/>
+		<field name="mobile" prior="*"  type="string" formname="Mobile" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post" javascript="checkPhone(this)"/>
+		<field name="email" type="string" formname="Email" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post" javascript="checkEmail(this)"/>
+		<field name="comments" type="string" formname="Comment" formtype="textarea" cols="20" rows="4" updatein="ma_comment" defaultvalue="__post" showinform="no" showinList="no"/>
+		<field name="mpic" type="string" formname="mpic" formtype="hidden" showinform="yes" showinList="no" defaultvalue="default.gif"/>
+		
+		<idfield name="member_id"/>
+		<namefield name="member_code" repeat="no"/>
+		<showpage value="10"/>
+	</m_membership>
+	<mb_category useTable="yes">
+		<field name="category_id" type="int" formname="Category ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="category_name" type="string" formname="Category Name" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="category_active" type="int" formname="Enable" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		
+		<namefield name="category_name"/>
+		<idfield name="category_id"/>
+		<activefield name="category_active"/>
+		<showpage value="15"/>
+	</mb_category>
+	<ac_comment useTable="yes">
+		<field name="comment_id" type="int" formname="Comment ID" formtype="hidden" showinform="yes" showinList="no" defaultvalue="__post" />
+		<field name="member_id" type="int" formname="Member ID" formtype="hidden" showinform="yes" showinList="no" defaulvalue="__post"/>
+		<field name="comments" type="string" formname="Comments" formtype="text" showinform="yes" showinList="yes" defaulvalue="__post"/>
+		<field name="l_lu_user" type="int" formname="l_lu_user" formtype="hidden" showinform="yes" showinList="no" defaulvalue="__post"/>
+		<field name="l_lu_date" type="date" formname="l_lu_date" formtype="hidden" showinform="yes" showinList="no" defaulvalue="__post"/>
+		<field name="l_lu_ip" type="string" formname="l_lu_ip" formtype="hidden" showinform="yes" showinList="no" defaulvalue="__post"/>
+		<field name="active" type="int" formname="active" formtype="hidden" showinform="yes" showinList="no" defaulvalue="__post"/>
+				
+		<idfield name="comment_id"/>
+		<namefield name="comments"/>
+	</ac_comment>
+	<dl_nationality>
+		<field name="nationality_id" type="int" formname="Nationality ID" formtype="text" showinform="no" showinList="yes"/>
+		<field name="nationality_name" type="string" formname="Nationality ID" formtype="text" showinform="no" showinList="yes"/>
+		<field name="continent_id" type="int" formname="Continent ID" formtype="text" showinform="no" showinList="yes"/>
+		<field name="nationality_active" type="int" formname="Nationality Active" formtype="text" showinform="no" showinList="yes"/>
+		
+		<idfield name="nationality_id"/>
+		<namefield name="nationality_name"/>
+		<activefield name="nationality_active"/>
+	</dl_nationality>
+	<dl_sex>
+		<field name="sex_id" type="int" formname="Sex ID" formtype="text" showinform="no" showinList="yes"/>
+		<field name="sex_type" type="string" formname="Sex Type" formtype="text" showinform="no" showinList="yes"/>
+		
+		<idfield name="sex_id"/>
+		<namefield name="sex_type"/>
+	</dl_sex>
+	<g_gift useTable="yes">
+		<field name="gift_id" type="int" formname="Gift Id" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="gift_number" prior="*" type="int" formname="Gift Number" maxlength="10" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post"/>
+		<field name="give_to" prior="*" type="string" formname="Give To" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post"/>
+		<field name="receive_from" prior="*" type="string" formname="Receive From" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post"/>
+		<field name="value" type="float" formname="Value" formtype="text" maxlength="10" showinform="yes" showinList="yes" defaultvalue="__post"/>
+		<field name="gifttype_id" type="int" formname="Type" formtype="select" showinform="yes" showinList="yes" table="gl_gifttype" refresh="yes" defaultvalue="__post"/>
+		<field name="issue" type="date" prior="*" formname="Issue" formtype="date" showinform="yes" showinList="yes" defaultvalue="__post"/>
+		<field name="expired" type="date" prior="*" formname="Expired" formtype="date" showinform="yes" showinList="yes" defaultvalue="__post"/>
+		<field name="used" type="date" formname="Used" formtype="date" showinform="no" showinList="yes" defaultvalue="__post"/>
+		<field name="receive_by_id" type="int" formname="Receive By" formtype="select" showinform="yes" showinList="yes" table="l_employee" refresh="yes" first="---select---"  defaultvalue="__post"/>
+		<field name="product" type="int" formname="Product" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post"/>
+		<field name="l_lu_user" type="string" formname="Add By" formtype="hidden" showinList="yes" showinform="yes" showinformAdd="yes" showinformEdit="no" defaultvalue="thisuser"/>
+        <field name="l_lu_date" type="string" formname="Add time" formtype="hidden" showinList="yes" showinform="yes" showinformAdd="yes" showinformEdit="no" defaultvalue="thistime"/>
+		<field name="l_lu_ip" type="string" formname="Add ip" formtype="hidden" showinList="no" defaultvalue="thisip"/>
+		<field name="book_id" type="int" formname="Book Id" formtype="text" showinformAdd="no" showinformEdit="yes" showinList="yes" defaultvalue="__post"/>
+		<field name="id_sold" type="int" formname="Id Sold" formtype="text" showinform="yes" showinList="yes" defaultvalue="__post"/>
+		<field name="tb_name" type="string" formname="Tb Name" formtype="hidden" showinform="yes" showinList="no" defaultvalue="__post"/>
+		<field name="available" type="int" formname="Active" formtype="hidden" showinform="yes" showinformAdd="no" defaultvalue="__post"/>
+				
+		<idfield name="gift_id"/>
+		<namefield name="gift_number" repeat="no"/>
+		<showpage value="10"/>
+	</g_gift>
+	<gl_gifttype useTable="yes">
+		<field name="gifttype_id" type="int" formname="Type ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="gifttype_name" type="string" formname="Gift Type" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="gifttype_active" type="int" formname="Enable" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		
+		<idfield name="gifttype_id"/>
+		<namefield name="gifttype_name"/>
+		<activefield name="gifttype_active"/>
+		<showpage value="15"/>
+	</gl_gifttype>	
+	<l_marketingcode useTable="yes">
+		<field name="mkcode_id" type="int" formname="Code Free/Discount ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="sign" type="string" formname="Sign" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="category_id" prior="*" type="int" formname="Catagory Name" formtype="select" table="l_mkcode_category" refresh="yes" first="---select---" defaultvalue="__post" />
+		<field name="issue" type="date" prior="*" formname="Issue" formtype="date" showinform="yes" showinList="yes" defaultvalue="__post"/>
+		<field name="expired" type="date" prior="*" formname="Expired" formtype="date" showinform="yes" showinList="yes" defaultvalue="__post"/>
+		<field name="place" type="string" formname="Place" defaultvalue="__post" formtype="text" showinform="yes"/>
+		<field name="contactperson" type="string" formname="Contact Person" defaultvalue="__post" formtype="text" showinform="yes"/>
+		<field name="phone" type="string" formname="Phone" defaultvalue="__post" formtype="text" showinform="yes"/>
+		<field name="comment" type="string" formname="Comments" defaultvalue="__post" formtype="text" showinform="yes"/>
+		<field name="active" type="int" formname="Enable" formtype="checkbox" showinform="yes" defaultvalue="__post" showinformAdd="no"/>
+		
+		<namefield name="sign"/>
+		<idfield name="mkcode_id"/>
+		<activefield name="active"/>
+		
+		<showpage value="15"/>
+	</l_marketingcode>
+	<l_mkcode_category useTable="yes">
+		<field name="category_id" type="int" formname="Category ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="category_name" type="string" formname="Category Name" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="category_active" type="int" formname="Enable" formtype="checkbox" showinform="yes" defaultvalue="__post" showinformAdd="no"/>
+		
+		<idfield name="category_id"/>
+		<namefield name="category_name"/>
+		<activefield name="category_active"/>
+		<showpage value="15"/>
+	</l_mkcode_category>		
+</table>
+</object>

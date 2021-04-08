@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<object>
+<table value="tap_smscore">
+	<p_clientconfig useTable="yes">
+		<field name="config_id" type="int" formname="Config ID" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="client_id" prior="*" type="int" formname="Clients Name" formtype="select" table="p_clientinfo" refresh="yes" defaultvalue="__get" first="---select---" />
+		<field name="global_oasisclient" type="int" formname="Oasis Clients" formtype="checkbox" showinform="yes"/>
+		<field name="global_gifttypeid" type="int" formname="Gift Sold ID" formtype="checkbox" showinform="yes"/>
+		<field name="global_payid" type="int" formname="Membership Paytype ID" formtype="checkbox" showinform="yes"/>
+		<field name="global_admingroupuser" type="int" formname="Adminitrator Group ID" formtype="checkbox" showinform="yes"/>
+		
+		<idfield name="config_id"/>
+		
+	</p_clientconfig>
+	<p_clientinfo useTable="yes">
+		<field name="client_id" type="int" formname="Client ID" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="client_name" prior="*" type="string" formname="Client Name" defaultvalue="__get" formtype="text" showinform="yes"/>
+		<field name="client_url" prior="*" type="string" formname="URL" defaultvalue="__get" formtype="text" showinform="yes"/>
+		<field name="database_name" prior="*" type="string" formname="Database Name" defaultvalue="__get" formtype="text" showinform="yes"/>
+		<field name="database_user" prior="*" type="string" formname="Database User" defaultvalue="__get" formtype="text" showinform="yes"/>
+		<field name="database_pass" prior="*" type="string" formname="Database Password" defaultvalue="__get" formtype="text" showinform="yes"/>
+		<field name="database_host" prior="*" type="string" formname="Database Host" defaultvalue="__get" formtype="text" showinform="yes"/>
+		<field name="l_lu_user" type="string" formname="Update by" formtype="hidden" showinList="yes" defaultvalue="__get"/>
+        <field name="l_lu_date" type="int" formname="Update date" formtype="hidden" defaultvalue="__get"/>
+		<field name="c_lu_user" type="string" formname="Add by" formtype="hidden" showinList="yes" defaultvalue="__get"/>
+        <field name="c_lu_date" type="int" formname="Add date" formtype="hidden" defaultvalue="__get"/>
+		<field name="c_lu_ip" type="int" formname="Add ip" formtype="hidden" showinList="no" defaultvalue="__get"/>
+		<field name="timezone" prior="*" type="int" formname="Time Zone" defaultvalue="__get"  formtype="select" table="l_timezone" refresh="yes" first="---select---" />
+		<field name="force_time" prior="*" type="string" formname="Force Time" defaultvalue="__get" formtype="hidden" showinform="no" showinList="no"/>
+		<field name="force_message" prior="*" type="string" formname="Force Message" defaultvalue="__get" formtype="hidden" showinform="no" showinList="no"/>
+		<field name="active" type="int" formname="Active" formtype="hidden" defaultvalue="1" showinform="yes" showinformAdd="no"/>
+		
+		
+		
+		<namefield name="client_name"/>
+		<idfield name="client_id"/>
+		<activefield name="active"/>
+		<showpage value="15"/>
+	</p_clientinfo>
+	
+	<s_pagename>
+		<field name="page_id" type="int" formname="Page ID" formtype="hidden" showinList="no" showinform="no"/>
+		<field name="page_name" type="string" formname="Page Name" formtype="text"/>
+		<field name="url" type="string" formname="Url" formtype="text" showinList="no"/>
+		<field name="index" type="int" formname="Level Index of page" formtype="text" showinList="no"/>
+		<field name="page_parent_id" type="int" formname="Parent Page ID" formtype="select" table="s_pagename" showinList="no"/>
+		<field name="active" type="int" formname="Enable" formtype="checkbox" showinformAdd="no"/>
+		<field name="description" type="string" formname="Description" formtype="textarea" cols="40" rows="4"/>
+		
+		
+		<namefield name="page_name"/>
+		<idfield name="page_id"/>
+		<activefield name="active"/>
+		<showpage value="15"/>
+	</s_pagename>
+	<s_gpage>
+		<field name="gpage_id" type="int" formname="Group Page ID" formtype="hidden" showinform="no"/>
+		<field name="group_id" type="int" formname="Group ID" formtype="select" table="s_groyp"/>
+		<field name="page_id" type="int" formname="Page ID" formtype="select" table="s_pagename"/>
+		<field name="set_view" type="int" formname="Set View" formtype="checkbox"/>
+		<field name="set_edit" type="int" formname="Set Edit" formtype="checkbox"/>
+		
+		<idfield name="gpage_id"/>
+	</s_gpage>	
+	<s_user useTable="yes">
+		<field name="u_id" type="int" formname="User id" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="u" prior="*" type="string" formname="Username" formtype="text" defaultvalue="__get" showinform="yes"/>
+		<field name="emp_code" prior="*" type="int" formname="Employee Code" formtype="text" defaultvalue="__get" showinList="yes" showinform="yes"/>
+		<field name="pass" type="string" formname="Password" formtype="password" showinform="yes" showinList="no" />
+		<field name="fname" prior="*" type="string" formname="Name" formtype="text" defaultvalue="__get" showinform="yes"/>	
+		<field name="lname"  type="string" formname="Last Name" formtype="text" defaultvalue="__get" showinform="yes"/>
+        <field name="email" type="string" formname="Email" defaultvalue="__get" formtype="text" showinform="yes"/>	
+		<field name="l_lu_user" type="string" formname="Update by" formtype="hidden" showinList="yes" defaultvalue="__get"/>
+        <field name="l_lu_date" type="int" formname="Update date" formtype="hidden" defaultvalue="__get"/>
+		<field name="c_lu_user" type="string" formname="Add by" formtype="hidden" showinList="yes" defaultvalue="__get"/>
+        <field name="c_lu_date" type="int" formname="Add time" formtype="hidden" defaultvalue="__get"/>
+		<field name="c_lu_ip" type="int" formname="Add ip" formtype="hidden" showinList="no" defaultvalue="__get"/>
+		<field name="active" type="int" formname="Active" formtype="hidden" defaultvalue="__get" showinform="no" showinList="yes"/>
+		
+		<namefield name="u" repeat="no"/>
+		<idfield name="u_id"/>
+		<activefield name="active"/>
+		
+		<jointable tablename="s_user" jointype="left join" pkfield="l_lu_user" fgkfield="u_id" />
+		
+		<showpage value="15"/>
+	</s_user>
+	<l_timezone useTable="yes">
+		<field name="timezone_id" type="int" formname="Time Zone ID" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="description" type="string" formname="Time Zone" formtype="text" showinform="yes"/>
+		<field name="gmt" type="string" formname="GMT" formtype="text" showinform="yes"/>
+				
+		<idfield name="timezone_id"/>
+		<namefield name="description" repeat="no"/>
+		
+	</l_timezone>
+</table>
+</object>

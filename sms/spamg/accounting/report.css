@@ -1,0 +1,85 @@
+body 
+{
+
+        font-family : Verdana, Geneva;
+        font-size : 12px;
+        margin : 0px 0px;
+        color : #4F514F;
+}
+
+td {
+        font-family : Verdana, Geneva;
+        font-size : 12px;
+        margin : 0px 0px;
+        color : #4F514F;
+}
+
+.brown_td{
+        background-color : #FFFFFF;
+        font-family : Verdana, Geneva;
+        font-size : 10 px;
+        color : #5188B2;
+}
+.just {
+        text-align : justify;
+}
+.normal {
+        font-family : Verdana, Geneva;
+        font-size : 11 px;
+        color : #FFFFFF;
+}
+
+.print_salse {
+		font-weight:lighter;
+				
+}
+.small {
+		font-family : Verdana, Geneva;
+        font-size : 10px;
+        margin : 0px 0px;
+        color : #4F514F;
+}
+.small_2 {
+		font-family : Verdana, Geneva;
+        font-size : 10px;
+        margin : 0px 0px;
+        color : #4F514F;
+}
+
+a:link, a:visited, a:active {
+        font-family : Verdana, Geneva;
+        
+        color : #4F514F;
+		 text-decoration : none;
+}
+a:hover {
+        font-family : Verdana, Geneva;
+        
+        color : #CCCCCC;
+         text-decoration : none;
+}
+
+a.menu:link, a.menu:visited, a.menu:active {
+        font-family : Verdana, Geneva;
+      
+        color : #ffffff;
+        text-decoration : none;
+}
+a.menu:hover {
+        font-family : Verdana, Geneva;
+        color : #ffffff;
+         text-decoration : none;
+}
+
+
+a.copy:link, a.copy:visited, a.copy:active {
+        font-family : Verdana, Geneva;
+        font-weight : bold;
+        color : #ffffff;
+        text-decoration : none;
+}
+a.copy:hover {
+        font-family : Verdana, Geneva;
+        color : #FFFFFF;
+         text-decoration : none;
+}

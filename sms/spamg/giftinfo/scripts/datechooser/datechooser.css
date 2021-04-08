@@ -1,0 +1,93 @@
+/*.dateChooser td.dateChooserActive {
+    cursor:default;
+	height: 21px;
+    text-align:center;
+}
+.dateChooser td.dateChooserActive:hover {
+    color:white;
+    background:#aea;
+}
+.dateChooser td.dateChooserActiveToday {
+    border: 0px;
+}
+.dateChooser th {
+    color: #000;
+    width:18px;
+    font-size: 11px;
+}
+.dateChooser {
+	border: 1px medium #aaa;
+    background: white;
+    padding: 1px;
+    margin-top: 5px;
+	font:"MS Sans Serif";
+    font-size: 9px;
+}
+.dateChooser table {
+    border: 1px solid #aaa;
+	font:"MS Sans Serif";
+    font-size: 11px;
+	width: 150px;
+}
+.dateChooser select.dateselect {
+	width: auto;
+} 
+
+
+/* dateChooser css */
+.dateChooser td.dateChooserActive {
+    cursor:default;
+	height: 21px;
+    padding: 1px;
+    border: 0px;
+}
+.dateChooser td.dateChooserActive:hover {
+    color:white;
+    background:#aea;
+	text-align:center;
+}
+.dateChooser td.dateChooserActiveToday {
+    border: 0px;
+	text-align:center;
+}
+.dateChooser select.dateselect{
+	width: 70px;
+	font-size:11px;
+	font-family:Tahoma;
+}
+.dateChooser th {
+    color: #000000;
+    width:20px;
+    font-size: 11px;
+}
+.dateChooser {
+	border: 1px medium #aaaaaa;
+    background: white;
+    padding: 1px;
+    margin-top: 5px;
+	font:"MS Sans Serif";
+    font-size: 9px;
+	z-index:2;
+}
+.dateChooser table {
+    border: 1px solid #aaaaaa;
+	font:"MS Sans Serif";
+    font-size: 11px;
+    color: #000000;	
+}
+.dateChooser span.warpDateChooser {
+	top: 75px;
+	padding-top: 5px;
+    background: #aea;
+	/*position: fixed;*/
+	width:150px;
+	position: auto;
+}
+ .rheader span.warpDateChooser {
+	top: 75px;
+	padding-top: 5px;
+    background: #aea;
+	/*position: fixed;*/
+	width:150px;
+	position: auto;
+}

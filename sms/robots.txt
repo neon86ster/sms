@@ -1,0 +1,10 @@
+# Robots.txt
+# APR-20-09, m
+
+User-agent: *
+Disallow: /
+Disallow: /cgi-bin/
+Disallow: /images/
+Disallow: /scripts/
+Disallow: /include/
+

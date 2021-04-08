@@ -1,0 +1,84 @@
+/* css for Member Login page */
+body.login {
+	background-color: #ffffff;
+	background-image: url("../images/login/SMSbackground.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center bottom;
+	width: 100%;height:100%;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-family:Tahoma;
+	font-size: 11px;
+	overflow:auto;
+}
+body.onlinebooking {
+	background-color: #ffffff;
+	background-image: url("../images/login/SMSbackground.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center bottom;
+	width: 100%;height:100%;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-family:Tahoma;
+	font-size: 11px;
+	overflow:auto;
+}
+form{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+body.login table {
+	/*border: 2px solid #eae8e8;*/
+	font-family:Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #498ab7;
+}
+
+body.onlinebooking table {
+	/*border: 2px solid #eae8e8;*/
+	font-family:Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #444444;
+}
+
+a {
+	font-size: 11px;
+	font-weight: bold;
+	font-family:Tahoma;
+	color: #34698d;
+	cursor: pointer;
+}
+
+a:hover{
+	color: #ff0000;
+}
+
+input.button {
+        color:#000000;
+        font-size:11px;
+        Border-Bottom:1px solid #D0D0D0;
+        Border-Top:1px solid #D0D0D0;
+        Border-Right:1px solid #D0D0D0;
+        Border-Left:1px solid #D0D0D0;
+        Background:#f4f4f4;
+        cursor:hand
+}
+
+input,textarea:disabled {
+        color: #444444;
+        font-size: 11px;
+		font-family:"Microsoft Sans Serif","MS Sans Serif";
+        border-width: 1px;
+        border-bottom: 1px #D0D0D0 ;
+        border-left: 1px #D0D0D0;
+        border-top: 1px #D0D0D0;
+        border-right: 1px #D0D0D0;
+        border-style: solid;
+}
+
+img {border-color:#498ab7;} 

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<object>
+<table value="cms">
+	<a_bookinginfo useTable="yes">
+		<field name="book_id" type="int" formname="Booking ID" formtype="hidden" showinform="yes"/>
+		<field name="a_member_code" type="int" formname="Member Code" formtype="text" showinform="yes"/>
+		<field name="b_branch_id" type="int" formname="Branch ID" formtype="text" showinform="yes"/>
+		<field name="b_book_datets" type="date" formname="Add Time" formtype="text" showinform="yes"/>
+		<field name="b_group_name" type="string" formname="Group Name" formtype="text" showinform="yes"/>
+		<field name="b_qty_people" type="int" formname="Qty People" formtype="text" showinform="yes"/>
+		<field name="b_comment" type="string" formname="Comment" formtype="textarea" cols="40" rows="4" showinform="yes"/>
+		<field name="b_accommodations_id" type="int" formname="Accommodation ID" formtype="text" showinform="yes"/>
+		<field name="b_set_pickup" type="int" formname="Booking Pickup" formtype="text" showinform="yes"/>
+		<field name="b_set_cancel" type="int" formname="Booking Cancel" formtype="text" showinform="yes"/>
+		<field name="b_date" type="date" formname="Booking Date" formtype="text" showinform="yes"/>
+		<field name="b_time_id" type="int" formname="Booking Time ID" formtype="text" showinform="yes"/>
+		<field name="b_reservation_id" type="int" formname="Booking Reservation ID" formtype="text" showinform="yes"/>
+		<field name="b_receive_id" type="int" formname="Booking Receive ID" formtype="text" showinform="yes"/>
+		<field name="b_set_atspa" type="int" formname="At Spa" formtype="checkbox" showinform="yes"/>
+		<field name="b_set_inroom" type="int" formname="In room" formtype="checkbox" showinform="yes"/>
+		<field name="b_set_finish" type="int" formname="Finish" formtype="checkbox" showinform="yes"/>
+		<field name="b_set_cms" type="int" formname="Commission Confirm" formtype="checkbox" showinform="yes"/>
+		<field name="c_bp_id" type="int" formname="B.P ID" formtype="text" showinform="yes"/>
+		<field name="c_book_person" type="string" formname="Booking Person" formtype="text" showinform="yes"/>
+		<field name="c_book_phone" type="string" formname="Booking Phone" formtype="text" showinform="yes"/>
+		<field name="c_pcms_id" type="int" formname="Percent Cms ID" formtype="text" showinform="yes"/>
+		<field name="c_lu_user" type="int" formname="User" formtype="text" showinform="yes"/>
+		<field name="c_lu_date" type="date" formname="Date/Time" formtype="text" showinform="yes"/>
+		<field name="d_accounting" type="string" formname="" formtype="text" showinform="yes"/>
+		<field name="d_md_user" type="int" formname="" formtype="text" showinform="yes"/>
+		<field name="d_a_pagenumber" type="int" formname="" formtype="text" showinform="yes"/>
+		<field name="l_set_user" type="int" formname="" formtype="text" showinform="yes"/>
+		<field name="l_lu_user" type="string" formname="Add by" formtype="hidden" showinList="yes" defaultvalue="thisuser"/>
+        <field name="l_lu_date" type="string" formname="Add time" formtype="hidden" defaultvalue="thistime"/>
+		<field name="l_lu_ip" type="string" formname="Add ip" formtype="hidden" defaultvalue="thisip"/>
+		<field name="tax_id" type="int" formname="Tax ID" formtype="hidden" defaultvalue="__post"/>
+		
+		<idfield name="book_id"/>
+		
+		<showpage value="15"/>
+	</a_bookinginfo>
+	<a_company_info useTable="yes">
+		<field name="company_id" type="int" formname="Company ID" formtype="hidden" showinList="no"/>
+		<field name="company_name" prior="*" type="string" formname="Company Name" defaultvalue="__post" formtype="text"/>
+		<field name="company_address" type="string" formname="Address" formtype="textarea" cols="40" defaultvalue="__post" rows="4"/>
+		<field name="company_phone" type="string" formname="Phone Number" formtype="text" defaultvalue="__post"/>
+		<field name="short_date" type="string" formname="Short Date Format" formtype="select" table="l_date" first="---select---" defaultvalue="__post"/>
+		<field name="long_date" type="string" formname="Long Date Format" formtype="select" table="l_date" first="---select---" defaultvalue="__post"/>
+		<field name="hostip" type="string" formname="Host IP" formtype="text" defaultvalue="__post"/>
+		<field name="hostname" type="string" formname="Hostname" formtype="text" defaultvalue="__post"/>
+		<field name="currency_symbol" prior="*" type="string" formname="Symbol" formtype="text" defaultvalue="__post" />
+		<field name="company_logo" prior="*" type="string" formname="Logo" formtype="text" defaultvalue="__post" />
+				
+		<namefield name="branch_name"/>
+		<idfield name="branch_id"/>
+		
+		<showpage value="15"/>
+	</a_company_info>
+	<bl_branchinfo useTable="yes">
+		<field name="branch_id" type="int" formname="Branch ID" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="branch_name" prior="*" type="string" formname="Branch Name" defaultvalue="__post" formtype="text" showinform="yes"/>
+		<field name="branch_code" prior="*" type="string" formname="Branch Code" defaultvalue="__post" formtype="text" showinform="yes"/>
+		<field name="branch_address" type="string" formname="Address" formtype="textarea" cols="40" defaultvalue="__post" rows="4" showinform="yes"/>
+		<field name="branch_phone" type="string" formname="Phone Number" formtype="text" defaultvalue="__post" showinform="yes"/>
+		<field name="city_id" type="int" formname="Province" formtype="select" table="al_city" defaultvalue="__post" refresh="yes" first="---select---" />
+		<field name="branch_msg" type="string" formname="Branch Message" formtype="textarea" defaultvalue="__post" cols="40" rows="4" showinform="yes"/>
+		<field name="branch_active" type="int" formname="Enable" formtype="checkbox" showinform="yes"/>
+		<field name="branch_category_id" prior="*" type="int" formname="Category" defaultvalue="__post"  formtype="select" table="bl_branch_category" refresh="yes" first="---select---" />
+		<field name="spa_dayoff" type="date" formname="Date" formtype="date" defaultvalue="__post"/>
+		<field name="servicescharge" type="int" formname="Services Charge" formtype="text" defaultvalue="__post" />
+		<field name="l_lu_user" type="string" formname="Add by" formtype="hidden" showinList="yes" defaultvalue="thisuser"/>
+        <field name="l_lu_date" type="string" formname="Add time" formtype="hidden" defaultvalue="thistime"/>
+		<field name="l_lu_ip" type="string" formname="Add ip" formtype="hidden" defaultvalue="thisip"/>
+		<field name="tax_id" prior="*" type="int" formname="Tax Id" formtype="text" defaultvalue="__post" showinList="no"/>
+				
+		<namefield name="branch_name"/>
+		<idfield name="branch_id"/>
+		
+		<showpage value="15"/>
+	</bl_branchinfo>
+	<bl_branch_category useTable="yes">
+		<field name="branch_category_id" type="int" formname="Branch Category ID" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="branch_category_name" type="string" formname="Branch Category Name" formtype="text" showinform="yes"/>
+		<field name="branch_category_active" type="int" formname="Enable" formtype="text" showinform="yes"/>
+				
+		<namefield name="branch_category_name"/>
+		<idfield name="branch_category_id"/>
+		
+		<showpage value="15"/>
+	</bl_branch_category>
+	<al_city>
+		<field name="city_id" type="int" formname="City ID" formtype="hidden" showinform="yes"/>
+		<field name="city_name" type="string" formname="City Name" formtype="text" showinform="yes"/>
+		<field name="city_code" type="string" formname="City Code" formtype="text" showinform="yes"/>
+		
+		<namefield name="city_name"/>
+		<idfield name="city_id"/>
+		
+		<showpage value="15"/>
+	</al_city>
+	<bl_room useTable="yes">
+		<field name="room_id" type="int" formname="Room ID" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="room_name" prior="*" type="string" formname="Room Name" formtype="text" defaultvalue="__post" showinform="yes"/>
+		<field name="branch_id" prior="*" type="int" formname="Branch name" formtype="select" table="bl_branchinfo" refresh="yes" defaultvalue="__post" first="---select---" />
+        <field name="room_detail" type="string" formname="Room Detail" formtype="textarea" cols="40" rows="4" defaultvalue="__post" showinform="yes"/>
+		<field name="room_active" type="int" formname="Enable" formtype="checkbox" defaultvalue="__post" showinList="yes"/>
+		
+		<namefield name="room_name"/>
+		<idfield name="room_id"/>
+		
+		<showpage value="15"/>
+	</bl_room>
+	<l_employee_department>
+		<field name="emp_department_id" type="int" formname="Employee Department ID" formtype="hidden" showinform="yes"/>
+		<field name="emp_department_name" type="string" formname="Employee Department Name" formtype="text" showinform="yes"/>
+		<field name="emp_department_active" type="int" formname="Enable" formtype="checkbox" defaultvalue="__post" showinList="yes"/>
+		
+		<namefield name="emp_department_name"/>
+		<idfield name="emp_department_id"/>
+		
+		<showpage value="15"/>
+	</l_employee_department>
+	<l_employee useTable="yes">
+		<field name="emp_id" type="int" formname="Employee ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="emp_code" formname="Employee Code" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_fname" formname="First Name" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_lname" formname="Last Name" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_nickname" formname="Nick Name" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_birthday" formname="Birthday" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_id_num" formname="ID Number" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_department_id" prior="*" type="int" formname="Department" formtype="select" table="l_employee_department" refresh="yes" first="---select---" defaultvalue="__post" />
+		<field name="branch_id" prior="*" type="int" formname="Branch name" formtype="select" table="bl_branchinfo" refresh="yes" first="---select---" defaultvalue="__post" />
+		<field name="city_id" prior="*" type="int" formname="City name" formtype="select" table="al_city" refresh="yes" first="---select---" defaultvalue="__post" />
+		<field name="emp_phonehome" formname="Phone Home" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_phonemobile" formname="Mobile" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_startdate" formname="Start Date" defaultvalue="__post" prior="*" type="int" formtype="text" showinform="yes"/>
+		<field name="emp_misc_info" formname="Misc info." type="string" formtype="textarea" cols="40" defaultvalue="__post" rows="4" showinform="yes"/>
+		<field name="l_lu_user" type="string" formname="Add by" formtype="hidden" showinList="yes" defaultvalue="thisuser"/>
+        <field name="l_lu_date" type="int" formname="Add time" formtype="hidden" defaultvalue="thistime"/>
+		<field name="l_lu_ip" type="int" formname="Add ip" formtype="hidden" defaultvalue="thisip"/>
+		<field name="emp_active" type="int" formname="Enable" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		
+		<namefield name="emp_name"/>
+		<idfield name="emp_id"/>
+		
+		<showpage value="15"/>
+	</l_employee>	
+	<cl_product useTable="yes">
+		<field name="pd_id" type="int" formname="Product ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="pd_name" formname="Product Name" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="pd_category_id" prior="*" type="int" formname="Catagory Name" formtype="select" table="cl_product_category" refresh="yes" first="---select---" defaultvalue="__post" />
+		<field name="standard_price" type="double" formname="Unit Prices" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="set_tax" type="int" formname="Plus Vat" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		<field name="set_sc" type="int" formname="Set sc" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		<field name="pd_active" type="int" formname="Enable" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		
+		<jointable jointype="left join" tablename="cl_product_category" pkfield="pd_category_id" fgkfield="pd_category_id"/>
+		
+		<namefield name="pd_name"/>
+		<idfield name="pd_id"/>
+		
+		<showpage value="15"/>
+	</cl_product>			
+	<cl_product_category useTable="yes">
+		<field name="pd_category_id" type="int" formname="Product Category ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="pd_category_name" type="string" formname="Product Category Name" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="pd_category_detail" type="string" formname="Product Category Detail" formtype="textarea" cols="40" defaultvalue="__post" rows="4" showinform="yes"/>
+		<field name="pd_category_priority" type="int" formname="Product Category Priority" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="pd_category_active" type="int" formname="Enable" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		
+		<namefield name="pd_category_name"/>
+		<idfield name="pd_category_id"/>
+		
+		<showpage value="15"/>
+	</cl_product_category>
+	<db_package useTable="yes">
+		<field name="package_id" type="int" formname="Package ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="package_name" type="string" formname="Package Name" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="price" type="int" formname="Price" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="package_detail" type="string" formname="Detail" formtype="textarea" cols="40" defaultvalue="__post" rows="4" showinform="yes"/>
+		<field name="hour" type="int" formname="Hour" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="package_active" type="int" formname="Enable" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		
+		<namefield name="package_name"/>
+		<idfield name="package_id"/>
+		<activefield name="package_active"/>
+		
+		<showpage value="15"/>
+	</db_package>
+	<db_trm_package useTable="yes">
+		<field name="trm_package_id" type="int" formname="Treatment Package ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="package_id" type="int" formname="Package ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="trm_id" type="int" formname="Treatment ID" formtype="hidden" showinform="yes" showinList="no" />
+		
+		<usejoin jointype="left join" tablename="db_trm" pkfield="trm_id" fgkfield="trm_id"/>
+		<idfield name="trm_package_id"/>
+	</db_trm_package>
+	<db_trm useTable="yes">
+		<field name="trm_id" type="int" formname="Treatment ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="trm_name" type="string" formname="Type" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="trm_category_id" type="int" formname="Treatment Category ID" formtype="hidden" showinform="no" showinList="no" />
+		<field name="trm_detail" type="string" formname="Detail" formtype="textarea" cols="40" defaultvalue="__post" rows="4" showinform="yes"/>
+		<field name="trm_active" type="int" formname="Enable" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		
+		<namefield name="trm_name"/>
+		<idfield name="trm_id"/>
+		
+		<showpage value="15"/>
+	</db_trm>
+	<db_trm_category useTable="yes">
+		<field name="trm_category_id" type="int" formname="Treatment Category ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="trm_category_name" type="string" formname="Treatment Category Name" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		
+		<namefield name="trm_category_name"/>
+		<idfield name="trm_category_id"/>
+		
+		<showpage value="15"/>
+	</db_trm_category>
+	<l_bankname useTable="yes">
+		<field name="bank_id" type="int" formname="Bank ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="bank_Ename" type="string" formname="Bankname(English)" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="bank_Tname" type="string" formname="Bankname(Thai)" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		
+		<namefield name="bank_Ename"/>
+		<idfield name="bank_id"/>
+		
+		<showpage value="15"/>
+	</l_bankname>
+	<dl_nationality useTable="yes">
+		<field name="nationality_id" type="int" formname="Nationality ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="nationality_name" type="string" formname="Nationality Name" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="continent_id" type="int" prior="*" formname="Continent ID" formtype="select" table="dl_continent" refresh="yes" first="---select---" defaultvalue="__post" />
+		<field name="nationality_active" type="int" formname="Enable" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		
+		<namefield name="nationality_name"/>
+		<idfield name="nationality_id"/>
+		
+		<showpage value="15"/>
+	</dl_nationality>
+	<dl_continent useTable="yes">
+		<field name="continent_id" type="int" formname="Continent ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="continent_name" type="string" formname="Continent Name" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		
+		<namefield name="continent_name"/>
+		<idfield name="continent_id"/>
+		
+		<showpage value="15"/>
+	</dl_continent>
+	<l_paytype useTable="yes">
+		<field name="pay_id" type="int" formname="Payment ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="pay_name" type="string" formname="Payment Name" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="pay_active" type="int" formname="Enable" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		
+		<namefield name="pay_name"/>
+		<idfield name="pay_id"/>
+		
+		<showpage value="15"/>
+	</l_paytype>
+	<l_date>
+		<field name="date_id" type="int" formname="Date ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="date_type" type="string" formname="Standard date format" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+	
+		<namefield name="date_type"/>
+		<idfield name="date_id"/>
+		
+		<showpage value="15"/>
+	</l_date>
+	<l_time>
+		<field name="time_id" type="int" formname="Time ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="time_type" type="string" formname="Standard time format" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		
+		<namefield name="time_type"/>
+		<idfield name="time_id"/>
+		
+		<showpage value="15"/>
+	</l_time>
+	<p_timer>
+		<field name="time_id" type="int" formname="Time ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="time_start" type="string" formname="Start Time" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		
+		<namefield name="time_start"/>
+		<idfield name="time_id"/>
+		
+		<showpage value="15"/>
+	</p_timer>
+	<l_tax>
+		<field name="tax_id" type="int" formname="Tax ID" formtype="hidden" defaultvalue="__post"/>
+		<field name="tax_percent" type="string" formname="Tax percent" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="branch_id" type="int" formname="Branch ID" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="l_lu_user" type="string" formname="Add by" formtype="hidden" showinList="yes" defaultvalue="thisuser"/>
+        <field name="l_lu_date" type="string" formname="Add time" formtype="hidden" defaultvalue="thistime"/>
+		<field name="l_lu_ip" type="string" formname="Add ip" formtype="hidden" defaultvalue="thisip"/>
+		<field name="active" type="int" formname="Enable" formtype="checkbox" showinform="yes"/>
+		
+		<idfield name="tax_id"/>
+		
+		<showpage value="15"/>
+	</l_tax>
+	<s_pagename>
+		<field name="page_id" type="int" formname="Page ID" formtype="hidden" showinform="no"/>
+		<field name="page_name" type="string" formname="Page Name" formtype="text"/>
+		<field name="url" type="string" formname="Url" formtype="text"/>
+		<field name="index" type="int" formname="Level Index of page" formtype="text"/>
+		<field name="page_parent_id" type="int" formname="Parent Page ID" formtype="select" table="s_pagename"/>
+		<field name="description" type="string" formname="Description" formtype="textarea" cols="40" rows="4"/>
+		<field name="active" type="int" formname="Enable" formtype="checkbox"/>
+		<field name="page_refer" type="int" formname="Enable" formtype="checkbox"/>
+		
+		<namefield name="page_name"/>
+		<idfield name="page_id"/>
+	</s_pagename>
+	<s_gpage>
+		<field name="gpage_id" type="int" formname="Group Page ID" formtype="hidden" showinform="no"/>
+		<field name="group_id" type="int" formname="Group ID" formtype="select" table="s_groyp"/>
+		<field name="page_id" type="int" formname="Page ID" formtype="select" table="s_pagename"/>
+		<field name="set_view" type="int" formname="Set View" formtype="checkbox"/>
+		<field name="set_edit" type="int" formname="Set Edit" formtype="checkbox"/>
+		
+		<idfield name="gpage_id"/>
+	</s_gpage>
+	<s_ugroup>
+		<field name="ugroup_id" type="int" formname="Ugroup Id" formtype="hidden"/>
+		<field name="group_id" type="int" formname="Group Id" formtype="hidden"/>
+		<field name="u_id" type="int" formname="User Id" formtype="hidden"/>
+		<field name="set_view" type="tinyint" formname="Set view" formtype="hidden"/>
+		<field name="set_edit" type="tinyint" formname="Set Edit" formtype="hidden"/>
+		<field name="l_lu_user" type="int" formname="l_lu_user" formtype="hidden"/>
+		<field name="l_lu_date" type="datetime" formname="l_lu_date" formtype="hidden"/>
+		<field name="l_lu_ip" type="string" formname="l_lu_ip" formtype="hidden"/>
+		<field name="active" type="int" formname="active" formtype="hidden"/>
+		
+		<idfield name="ugroup_id"/>
+	</s_ugroup>
+	<s_group>
+		<field name="group_id" type="int" formname="Group Id" formtype="hidden"/>
+		<field name="group_name" type="string" formname="Group name" formtype="hidden"/>
+		<field name="description" type="string" formname="Description" formtyp="hiden"/>
+		<field name="l_lu_user" type="int" formname="l_lu_user" formtype="hidden"/>
+		<field name="l_lu_date" type="datetime" formname="l_lu_date" formtype="hidden"/>
+		<field name="l_lu_ip" type="string" formname="l_lu_ip" formtype="hidden"/>
+		<field name="active" type="int" formname="active" formtype="hidden"/>
+		
+		<idfield name="group_id"/>
+		<namefield name="group_name"/>
+	</s_group>	
+	<a_appointment>
+		<field name="appt_id" type="int" formname="Appointment ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="book_id" type="int" formname="Book ID" formtype="text" showinform="yes" showinList="yes" />
+		<field name="branch_id" type="int" formname="Branch ID" formtype="text" showinform="yes" showinList="yes" />
+		<field name="appt_date" type="string" formname="Appointment date" formtype="text" showinform="yes" showinList="yes" />
+		<field name="appt_date_id" type="int" formname="Appointment date" formtype="text" showinform="yes" showinList="yes" />
+		<field name="customer_name" type="string" formname="Appointment date" formtype="text" showinform="yes" showinList="yes" />
+		<field name="room_ids" type="string" formname="Room Id" formtype="text" showinform="yes" showinList="yes" />
+		<field name="room_names" type="string" formname="Room Name" formtype="text" showinform="yes" showinList="yes" />
+		<field name="qty_peoples" type="string" formname="People Amount" formtype="text" showinform="yes" showinList="yes" />
+		<field name="th_names" type="string" formname="Th Name" formtype="text" showinform="yes" showinList="yes" />
+		<field name="hour_ids" type="string" formname="Hour Id" formtype="text" showinform="yes" showinList="yes" />
+		<field name="accdt_name" type="string" formname="Room id" formtype="Accdt Name" showinform="yes" showinList="yes" />
+		<field name="t_times" type="string" formname="T Time" formtype="text" showinform="yes" showinList="yes" />
+		<field name="t_names" type="string" formname="T Name" formtype="text" showinform="yes" showinList="yes" />
+		<field name="t_places" type="string" formname="T Places" formtype="text" showinform="yes" showinList="yes" />
+		<field name="bp_name" type="string" formname="Bp Name" formtype="text" showinform="yes" showinList="yes" />
+		<field name="bp_person" type="string" formname="Bp _person" formtype="text" showinform="yes" showinList="yes" />
+	</a_appointment>
+</table>
+</object>

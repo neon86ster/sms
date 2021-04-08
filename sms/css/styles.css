@@ -1,0 +1,711 @@
+/* css for all */
+body{
+	font-family:Tahoma;
+	font-size: 12px;
+	background-color: #eae8e8;
+	font-weight: bold;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	overflow:auto;
+	/*
+	scrollbar-face-color: #5591a9;
+	scrollbar-shadow-color: #9ec6d6;
+	scrollbar-highlight-color: #9ec6d6;
+	scrollbar-3dlight-color: #9ec6d6;
+	scrollbar-darkshadow-color: #9ec6d6;
+	scrollbar-track-color: #9ec6d6;
+	scrollbar-arrow-color: #ffffff;
+	*/	
+}
+
+a {
+	font-family:Tahoma;
+	font-size: 12px;
+	cursor: pointer;
+	color:#ffffff;
+}
+a:link,a:hover,a:visited,a:active {
+	font-family:Tahoma;
+	font-size: 12px;
+	text-decoration: none;
+	cursor: pointer;
+	color:#ffffff;
+}
+font{
+	font-family:Tahoma;
+	font-size: 12px;
+}
+form{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+input.button {      
+    border: 0px;
+    height: 20px;
+	cursor: pointer;
+	overflow: hidden;
+	text-indent: -9999px;
+	/* fix for IE: can't set text-indent */
+	font-size: 0px;
+	line-height: 0px;
+}
+fieldset {
+ 	margin: 10px 0 0 0;
+ 	padding: 0;
+ 	border-top: 1px solid #d3d3d3;
+ 	border-bottom: none;
+ 	border-left: none;
+ 	border-right: none;
+	font-size: 12px;
+ 	color: #2b5b71;
+}
+legend {
+  	margin-bottom: 10px;
+  	margin-left: -9px;
+  	padding-right: 10px;
+  	/*vertical-align: middle;*/
+  	padding-left: 5px;
+}
+/***** css for setting hiddenbar on main right frame *****/
+.hidden_bar{
+	width: 5px; 
+	height:100%;
+	background-image: url(../images/body_bg.gif)  !important;
+	background-repeat:repeat-y;
+	z-index:7;
+}
+div.hiddenbar {
+	background-image: url(../images/body_bg.gif);
+  	left: 0;
+  	top: 0;
+	width: 5px !important; 
+	height: 100%;
+	position:fixed;
+}
+img#spLine {
+	width: 8px; 
+	height: 24px;
+  	top: 50%;
+	position: fixed;
+  	cursor: pointer;
+}
+div.hiddenbar {
+	background-image: url(../images/body_bg.gif);
+  	left: 0;
+  	top: 0;
+	width: 5px; 
+	height: 100%;
+	position: absolute;
+}
+img#spLine {
+	width: 8px; 
+	height: 24px;
+  	top: 50%;
+	position: absolute;
+  	cursor: pointer;
+}
+/***** css for setting error message on main right frame *****/
+.errormsg {
+	color: #d4454d;
+	font-family:Tahoma;
+	font-size: 12px;
+}
+/***** css for setting success message on main right frame *****/
+.successmsg{
+	color: #0554e4;
+	font-family:Tahoma;
+	font-size: 12px;
+}
+/* css for login page */
+body.login {
+	background-color: #ffffff;
+	background-image: url("../images/login/SMSbackground.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center bottom;
+	width: 100%;height:100%;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-family:Tahoma;
+	font-size: 11px;
+}
+input.lbutton {
+    background-image: url("../images/login/enter.gif");        
+    border: 0px;
+    height: 40px;
+    width: 124px;
+	cursor: pointer;
+	overflow: hidden;
+}
+font.mainheader{
+	font-family: "Times New Roman";
+}
+div.empframe {
+	position: absolute;
+  	right: 9px;
+  	top: 3px;
+}
+
+
+/* css for leftmenu page */
+table.leftmenu {
+	table-layout: fixed;
+}
+.leftmenu a:hover{
+	color:#0038a4;
+	font-family:Tahoma;
+	font-size:12px;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+}
+.leftmenu a:link,a:visited,a:active {
+	color:#ffffff;
+	font-family:Tahoma;
+	font-size:12px;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+}
+/* mainpage css */
+span.menuheader {
+	position: fixed;right:20px;top: 5px;
+	margin-right:10px;
+}
+table#mainheader {
+	position:fixed;top:0px;left:0px;
+	width:100%!important;
+}
+input.text {
+    border: 0px;
+    background: #eae8e8;
+	font-family:Tahoma;
+	font-size: 12px;
+}
+/*select {width: 115px;font-family:Tahoma; font-size: 11px;}*/
+b.welcomecompany {
+	font-family:Tahoma;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: default;
+	color:#626262;
+}
+.welcome{
+		position: absolute;top: 10px;right: 65px
+}
+table.mainmenu {
+	width: 333px;
+	height: 89px;
+	border: 0px;
+	cursor: pointer;
+	margin-left: 0px;
+	margin-top: 0px;
+}
+.mainmenu td {
+	vertical-align: middle;
+	padding-left: 10px;
+}
+.mainmenu td.endmenu {
+	vertical-align: top;
+	padding-left: 0px;
+	width: 13;
+}
+.mainmenu span {
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 5px;
+	font-family:Tahoma;
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: bold;
+}
+span.menudesc {
+	width: 200px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	font-family:Tahoma;
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: normal;
+}
+.dir td{
+	padding-left: 20px;
+	padding-top: 0px;
+	white-space:nowrap;
+}
+.dir b{
+	margin-top:20px;
+	font-family:Tahoma;
+	color: #ffffff;
+	font-size: 16px;
+}
+/* preloading style */
+div#loading {
+	vertical-align:middle;
+	position:absolute; 
+
+	background-color: #000000; 
+	width:100%; height:100%; 
+	text-align:center; 
+
+	opacity:0.70; 
+	z-index: 1;
+}
+table.preloading {position:fixed; vertical-align:middle; width:100%; height:100%; }
+.preloading td {
+	overflow:hidden;
+	color:#ffffff; 
+	font-family:Tahoma; 
+	font-size: 14px;
+	font-weight: bold;
+}
+/* ajax window css */
+.bg {
+	position:fixed; 
+	left:0px; top:0px; right:0px; bottom:0px; 
+	background-color: #000000; 
+	width:100%; height:100%; 
+	text-align:center; 
+	
+	opacity:0.70; 
+	z-index: 1;
+}
+/* report css */
+td.rheader {color:#4a4a4a; font-family:Tahoma; font-size: 11px; font-weight: bold;/*vertical-align: center;*/ background: #eae8e8;}
+td.rheader select {width: 115px;font-family:Tahoma; font-size: 12px;}
+td.rheader input {font-family:Tahoma; font-size: 12px;}
+td.rheader input.textbox {border: 0px; font-family:Tahoma; font-size: 12px;}
+td.rheader input.checkbox {border: 0px; font-family:Tahoma; font-size: 12px; width: auto;}
+td.rheader input.button {width: auto; font-family:Tahoma; font-size: 12px; }
+td.rheader a {color: #4a4a4a; font-family:Tahoma; font-size: 11px;font-weight: bold;cursor: pointer;}
+td.rheader a:link,a:hover,a:visited,a:active {color: #4a4a4a; font-family:Tahoma; font-size: 11px; font-weight: bold;cursor: pointer;text-decoration: none;}
+td.report {font-family:Tahoma; font-size: 12px;}
+td.report a {color: #4a4a4a; font-size: 11px;cursor: pointer;}
+td.report a:link,a:hover,a:visited,a:active {color: #4a4a4a; font-size: 11px;cursor: pointer;text-decoration: none;}
+
+/* pagelink css */
+.pagelink a:link {
+	font-family:Tahoma;
+	font-size: 12px;
+	color: #000000 !important;
+	font-weight:bold;
+	font-weight: normal;
+	cursor: pointer;
+}
+.pagelink a:hover {
+	font-family:Tahoma;
+	font-size: 12px;
+	color: #333333 !important;
+	text-decoration:underline;
+	font-weight: normal;
+	cursor: pointer;
+}
+/* all appt css */
+table.appt {
+	border: 2px solid #eae8e8;
+	font-family:Tahoma;
+	font-size: 10px;
+	font-weight: bold;
+	color: #2b5b71;
+}
+table.appt td {
+	border: #eae8e8 solid 1px;
+	background-color: #c0c0c0;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+table.appt td.mainheader{
+	color: #2b5b71;
+	border-bottom: #eae8e8 solid 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #6e9fb4;
+	white-space:nowrap;
+}
+/* book id link */
+a.menu:link, .mainbooking a.menu:visited,.mainbooking  a.menu:active {
+	font-family:Tahoma;
+	font-size: 11px;
+    font-weight : bold;
+    color : #387BC7;
+}
+ a.mmenu:link,.mainbooking a.mmenu:visited,.mainbooking a.mmenu:active {
+    font-weight : bold;
+	font-size: 11px;
+    color : #DE2418;
+}
+a.menu:hover,.mainbooking a.mmenu:hover {
+	font-family:Tahoma;
+    font-weight: bold;
+	font-size: 11px;
+    color: #DE2418;
+    text-decoration: underline;
+    cursor:pointer;
+}
+input#smenu{
+	font-family:Tahoma;
+    font-weight: bold;
+	font-size: 10px;
+	color: #4a4a4a;
+	border: none;
+	background: none;
+	cursor:pointer;
+	width: 10px;
+}
+input#smenu:hover{
+	font-family:Tahoma;
+    font-weight : bold;
+	font-size: 10px;
+	color : #DE2418;
+	text-decoration : underline;
+	border: none;
+	background: none;
+	width: 10px;
+}
+div#booking{
+	margin-left:-20px; margin-top:-10px;
+}
+/* all update field css */
+table.generalinfo {
+	width: 100%;
+	color: #000000;
+	font-family:Tahoma;
+	font-size: 11px;
+}
+table.generalinfo td{
+	background-repeat: no-repeat;
+	background-position: center top;
+	border-left: 1px solid #eae8e8;
+	font-family:Tahoma;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+table.generalinfo td a {
+	font-size: 12px;
+	font-weight: bold;
+	font-family:Tahoma;
+	color: #000000;
+	cursor: pointer;
+}
+table.generalinfo td a:link,a:hover,a:visited,a:active {
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+	cursor: pointer;
+}
+table.generalinfo input,select,textarea{
+	color: #000000;
+	font-family:Tahoma;
+	font-size: 11px;
+}
+table.generalinfo select{
+	width: 115px;
+}
+span.find-search {
+	/*style-padding: 0pt;*/
+	padding: 0px;
+	background-color: yellow;
+	color: black;
+	display: inline;
+}
+/* hovered table rows */
+
+table tr.even:hover{background-color:#b0dfde !important;} 
+table tr.odd:hover{background-color:#b0dfde !important;} 
+table tr.warn:hover{background-color:#b0dfde !important;} 
+
+
+/* --------------------------------------------*/
+
+/* odd table rows 1,3,5,7,... */
+table tr.odd th,table tr.odd {
+    background-color: #d3d3d3;
+	font-family:Tahoma;
+	font-size: 11px;
+}
+/* odd table rows 1,3,5,7,... */
+table tr.warn th,table tr.warn {
+    background-color: #ffcccc;
+	font-family:Tahoma;
+	font-size: 11px;
+}
+/* even table rows 2,4,6,8,... */
+table tr.even th,table tr.even {
+    background-color: transparent;
+	background-color:eaeaea;
+	font-family:Tahoma;
+	font-size: 11px;
+}
+/* appointment > currentcustomer status row background */
+table tr.finish {
+    background-color: #a4b9d9;
+	font-family:Tahoma;
+	font-size: 11px;
+}
+table tr.inroom {
+    background-color: #e9a9c9;
+	font-family:Tahoma;
+	font-size: 11px;
+}
+table tr.atspa {
+    background-color: #b7a5d3;
+	font-family:Tahoma;
+	font-size: 11px;
+}
+/* hovered table rows */
+table tr.finish:hover,
+table tr.inroom:hover,
+table tr.atspa:hover{
+    background-color: #b0dfde;
+}
+/* checker > branch closing report */
+table tr.paidconfirm {
+    background-color: #ffb9b9;
+	font-family:Tahoma;
+	font-size: 11px;
+}
+/* hovered table rows */
+table tr.paidconfirm:hover{
+    background-color: #b0dfde;
+}
+/* reports > csi > customer rating */
+table tr.csimassage {
+    background-color: #FF6633;
+	font-family:Tahoma;
+	font-size: 11px;
+}
+/* hovered table rows */
+table tr.csimassage:hover{
+    background-color: #b0dfde;
+}
+
+/* dateChooser css */
+.dateChooser td.dateChooserActive {
+    cursor:default;
+	height: 21px;
+    text-align:center;
+    padding: 1px;
+    border: 0px;
+}
+.dateChooser td.dateChooserActive:hover {
+    color:white;
+    background:#aea;
+}
+.dateChooser td.dateChooserActiveToday {
+    border: 0px;
+}
+.dateChooser select.dateselect{
+	width: 70px;
+	font-size:11px;
+	font-family:Tahoma;
+}
+.dateChooser th {
+    color: #000000;
+    width:20px;
+    font-size: 11px;
+	text-align:center;
+}
+.dateChooser {
+	border: 1px solid #aaaaaa;
+    background: white;
+    padding: 1px;
+    margin-top: 5px;
+	font-family:MS Sans Serif;
+    font-size: 9px;
+	text-align:center;
+}
+.dateChooser table {
+    border: 1px solid #aaaaaa;
+	font-family: MS Sans Serif;
+    font-size: 11px;
+    color: #000000;	
+}
+.dateChooser span.warpDateChooser {
+	top: 75px;
+	padding-top: 5px;
+    background: #aea;
+	/*position: fixed;*/
+	width:150px;
+	text-align:center !important;
+}
+ .rheader span.warpDateChooser {
+	top: 75px;
+	padding-top: 5px;
+    background: #aea;
+	/*position: fixed;*/
+	width:150px;
+}
+ /*-------------------- membership history css --------------------------*/
+ .generalinfo table.membership{
+ 	border: 0px;
+ }
+  .generalinfo table.membership td{
+ 	vertical-align: top;
+ 	text-align: left;
+ 	white-space: nowrap;;
+ }
+ div.commentinner {
+ 	margin-left: 0px;
+	margin-top: 0px;
+	overflow: auto;
+	overflow-x:hidden;
+	height: 250px;
+	position: relative;
+}
+/* --------------------- report style list ---------------------- */
+td.reporth{
+	font-family:Tahoma;
+	font-size: 12px;
+	text-align: center;
+	padding-left: 20px;
+	padding-top: 9px;
+	padding-right: 20px;
+	padding-bottom: 9px;
+	position: inherit;
+}
+td.reporth b{
+	font-family:Tahoma;
+	font-weight: bold;
+	font-size: 13px;
+}
+td.reporth p{
+	font-family:Tahoma;
+	font-weight: bold;
+	font-size: 15px;
+}
+td.reporth p.style1{
+	font-family:Tahoma;
+	color: #FF0000;
+	font-weight: bold;
+	font-size: 12px;
+}
+td.reporth font.style1{
+	font-family:Tahoma;
+	color: #FF0000;
+	font-weight: bold;
+	font-size: 12px;
+}
+td.report{
+	border-bottom: 1px solid #ffffff; 
+}
+td.reportmainthead {
+	border: 1px solid #FFFFFF; 
+	border-left: none;
+	border-collapse: collapse;
+	background-color: #d6dff7;
+	padding-left: 7px;
+	padding-bottom:3px;
+	padding-right: 7px;
+	/*vertical-align: center;*/
+	text-align: left;
+	font-weight: bold;
+	font-family:Tahoma;
+}
+td.reportmainthead a {
+	text-decoration:none;
+	font-family:Tahoma;
+}
+td.reportmainthead a:hover {
+	text-decoration:underline;
+	font-family:Tahoma;
+}
+.cmspopup {
+	background:#EFCFE0;
+	font-family:Tahoma;
+	font-size:12px;
+	border:1px solid #ff0000;
+	padding:5px;
+	width:220px;
+}
+table.arialfont {
+	font-family: Verdana, Geneva;
+}
+span.find-search {
+	/*style-padding: 0pt;*/
+	padding: 0pt;
+	background-color: yellow;
+	color: black;
+	display: inline;
+}
+div#tableDisplay td{
+	padding-right:5px;
+	font-family:Tahoma;
+	font-size:12px;
+	
+}
+
+#tableDisplay{
+	padding-left:15px;
+	padding-right:15px;
+	padding-top: 15px;
+}
+#gform{
+	padding-left:25px;
+	padding-right:15px;
+	padding-top: 20px;
+}
+
+.hide{
+	display:none;
+}
+/*------------------------------------*\
+Password Strength
+\*------------------------------------*/
+#pwdMeter{
+	color:#000;
+	text-align: center;
+	border: 1px #000 solid;
+	width: 120px;
+	height: 15px;
+	line-height: 15px;
+}
+
+/*------------------------------------*\
+	IPHONE
+\*------------------------------------*/
+@media screen and (max-device-width: 480px){
+/*--- iPhone only CSS here ---*/
+	object{
+		display:none;
+	}
+	embed{
+		display:none;
+	}
+	.dir{
+		display:none;
+	}
+	.mainmenu{
+		padding-left:2px;
+		padding-right:2px;
+	}
+	.welcome{
+		position: absolute;top: 10px;right: 65px
+	}
+	.hidden_bar{
+		display:none;
+	}
+	div.hiddenbar {
+		display:none;
+	}
+	#online {
+		position: absolute;
+		left: 5px;
+		top: 35px;
+	}
+	table.appt,#trans,#crs,#cd,#cen,#cms,#cpl,#bookagent,#bookingcomcms,#hotelcms,
+	#accom,#age,#custinfo,#health,#lorv,#csigraph,#inven,#item,#sale,#therapackage
+	,#theramassage,#marketing,#account{
+		width:1024px;
+	}
+	#csivalue,#thqueue{
+		width:550px;
+	}
+	#rooms,#thavi{
+		width:700px;
+	}
+	div#tableDisplay td{
+		font-size:10px;
+	}
+}

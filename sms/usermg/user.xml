@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<object>
+<table value="cms">
+	<s_group useTable="yes">
+		<field name="group_id" type="int" formname="Group id" formtype="hidden" showinList="no" />
+		<field name="group_name" prior="*" type="string" formname="Group name" formtype="text" defaultvalue="__post" showinList="yes"/>
+		<field name="description" type="string" formname="Description" formtype="textarea" cols="40" defaultvalue="__post" rows="4" showinList="yes"/>	
+		<field name="l_lu_user" type="string" formname="Add by" formtype="hidden" defaultvalue="thisuser"/>
+        <field name="l_lu_date" type="int" formname="Add time" formtype="hidden" defaultvalue="thistime"/>
+		<field name="l_lu_ip" type="int" formname="Add ip" formtype="hidden" defaultvalue="thisip"/>	
+		<field name="active" type="int" formname="Active" formtype="hidden" defaultvalue="__post" showinList="yes" showinformAdd="no"/>
+		<field name="top_user" type="int" formname="Top User" formtype="text" showinform="no" showinList="no"/>
+		
+		<namefield name="group_name"/>
+		<idfield name="group_id"/>
+		<activefield name="active"/>
+		
+		<jointable tablename="s_user" jointype="left join" pkfield="l_lu_user" fgkfield="u_id" />
+		
+		<showpage value="20"/>
+	</s_group>
+	<s_user useTable="yes">
+		<field name="u_id" type="int" formname="User id" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="u" prior="*" type="string" formname="Username" formtype="text" defaultvalue="__post" showinform="yes"/>
+		<field name="emp_code" prior="*" type="int" formname="Employee Code" formtype="text" defaultvalue="__post" showinList="yes" showinform="yes"/>
+		<field name="pass" type="string" formname="Password" formtype="password" showinform="yes" showinList="no" />
+		<field name="fname" type="string" formname="Name" formtype="text" defaultvalue="__post" showinform="yes"/>	
+		<field name="lname"  type="string" formname="Last Name" formtype="text" defaultvalue="__post" showinform="yes"/>
+        <field name="branch_id" prior="*" type="int" formname="Branch name" defaultvalue="__post" formtype="select" table="bl_branchinfo" refresh="yes" first="---select---" />
+        <field name="email" type="string" formname="Email" defaultvalue="__post" formtype="text" showinform="yes"/>	
+		<field name="l_lu_user" type="string" formname="Add by" formtype="hidden" showinList="yes" defaultvalue="thisuser"/>
+        <field name="l_lu_date" type="int" formname="Add time" formtype="hidden" defaultvalue="thistime"/>
+		<field name="l_lu_ip" type="int" formname="Add ip" formtype="hidden" defaultvalue="thisip"/>
+		<field name="upic" type="string" formname="upic" formtype="hidden" showinform="yes" showinList="no" defaultvalue="default.gif"/>
+		<field name="active" type="int" formname="Active" defaultvalue="__post" formtype="hidden" showinform="yes" showinformAdd="no"/>
+		
+		<namefield name="u"/>
+		<idfield name="u_id"/>
+		<activefield name="active"/>
+		
+		<jointable tablename="s_user" jointype="left join" pkfield="l_lu_user" fgkfield="u_id" />
+		
+		<showpage value="20"/>
+	</s_user>
+	<s_ugroup useTable="yes">
+		<field name="ugroup_id" type="int" formname="User id" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="group_id" type="int" formname="Group id" formtype="checkbox" showinform="yes"/>
+		<field name="set_view" type="int" formname="view" formtype="checkbox" showinform="yes"/>
+		<field name="set_edit" type="int" formname="edit" formtype="checkbox" showinform="yes" showinList="no" />
+		<field name="l_lu_user" type="string" formname="Add by" formtype="hidden" showinList="yes" defaultvalue="thisuser"/>
+        <field name="l_lu_date" type="string" formname="Add time" formtype="hidden" defaultvalue="thistime"/>
+		<field name="l_lu_ip" type="string" formname="Add ip" formtype="hidden" defaultvalue="thisip"/>
+		<field name="active" type="int" formname="Active" formtype="hidden" showinform="yes" showinformAdd="no"/>
+		
+		<namefield name="u"/>
+		<idfield name="u_id"/>
+		<activefield name="active"/>
+		
+		<jointable tablename="s_user" jointype="left join" pkfield="l_lu_user" fgkfield="u_id" />
+		
+		<showpage value="20"/>
+	</s_ugroup>
+	<bl_branchinfo useTable="yes">
+		<field name="branch_id" type="int" formname="Branch ID" formtype="hidden" showinform="yes" showinList="no"/>
+		<field name="branch_name" prior="*" type="string" formname="Branch Name" defaultvalue="__post" formtype="text" showinform="yes"/>
+		<field name="branch_address" type="string" formname="Address" formtype="textarea" cols="40" defaultvalue="__post" rows="4" showinform="yes"/>
+		<field name="branch_phone" type="string" formname="Phone Number" formtype="text" defaultvalue="__post" showinform="yes"/>
+		<field name="branch_taxid" prior="*" type="int" formname="Tax" formtype="text" defaultvalue="__post" showinform="yes"/>
+		<field name="city_id" type="int" formname="Province" formtype="select" table="al_city" defaultvalue="__post" refresh="yes" first="---select---" />
+		<field name="branch_msg" type="string" formname="Branch Message" formtype="textarea" defaultvalue="__post" cols="40" rows="4" showinform="yes"/>
+		<field name="branch_active" type="int" formname="Enable" formtype="checkbox" defaultvalue="__post" showinList="yes" showinformAdd="no"/>
+		<field name="branch_category_id" prior="*" type="int" formname="Category" defaultvalue="__post"  formtype="select" table="bl_branch_category" refresh="yes" first="---select---" />
+				
+		<namefield name="branch_name"/>
+		<idfield name="branch_id"/>
+		<activefield name="branch_active"/>
+		
+		<showpage value="15"/>
+	</bl_branchinfo>
+	<s_pagename>
+		<field name="page_id" type="int" formname="Page ID" formtype="hidden" showinform="no"/>
+		<field name="page_name" type="string" formname="Page Name" formtype="text"/>
+		<field name="url" type="string" formname="Url" formtype="text"/>
+		<field name="index" type="int" formname="Level Index of page" formtype="text"/>
+		<field name="page_parent_id" type="int" formname="Parent Page ID" formtype="select" table="s_pagename"/>
+		<field name="description" type="string" formname="Description" formtype="textarea" cols="40" rows="4"/>
+		<field name="active" type="int" formname="Enable" formtype="checkbox" showinformAdd="no"/>
+		
+		<namefield name="page_name"/>
+		<idfield name="page_id"/>
+		<activefield name="active"/>
+	</s_pagename>
+	<s_gpage>
+		<field name="gpage_id" type="int" formname="Group Page ID" formtype="hidden" showinform="no"/>
+		<field name="group_id" type="int" formname="Group ID" formtype="select" table="s_groyp"/>
+		<field name="page_id" type="int" formname="Page ID" formtype="select" table="s_pagename"/>
+		<field name="set_view" type="int" formname="Set View" formtype="checkbox"/>
+		<field name="set_edit" type="int" formname="Set Edit" formtype="checkbox"/>
+		
+		<idfield name="gpage_id"/>
+	</s_gpage>	
+	<l_timeperiod useTable="yes">
+		<field name="tp_id" type="int" formname="Time Period ID" formtype="hidden" showinform="yes" showinList="no" />
+		<field name="tp_name" type="int" formname="Time Period Name" defaultvalue="__post" prior="*" formtype="text" showinform="yes"/>
+		<field name="tp_distance" type="int" formname="Time Period Distance" formtype="checkbox" showinform="yes" defaultvalue="__post"/>
+		
+		<namefield name="tp_name"/>
+		<idfield name="tp_id"/>
+		
+		<showpage value="15"/>
+	</l_timeperiod>
+</table>
+</object>

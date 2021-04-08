@@ -1,0 +1,407 @@
+@charset "utf-8";
+* {
+	font-family: "Microsoft Sans Serif";
+	font-size: 11px;
+	color: #000000;
+}
+body {
+	margin: 0 0 0 0;
+}
+table {
+	border: 0px;
+	overflow:auto;
+}
+img.link {
+	cursor: pointer;
+	border: 0px;
+}
+td.header {
+	vertical-align: top;
+	padding-left: 20px;
+	padding-top: 7px;
+	padding-bottom: 0px;
+	position: inherit;
+	background-color: #F1F3F5;
+}
+td.menuheader {
+	vertical-align: top;
+	padding-left: 0px;
+	padding-top: 9px;
+	padding-bottom: 0px;
+	position: static;
+	background-color: #d6dff7;
+}
+td.tabmenuheader {
+	vertical-align: middle;
+	padding-left: 12px;
+	position: static;
+	background-color: #eae8e8;
+	height: 20px;
+}
+td.lefttabmenuheader {
+	border-left: 1px solid #F1F3F5;
+	position: static;
+	text-align: center;
+	width: 6px;
+	background: url("../../images/tab.png") no-repeat top left;
+	cursor: pointer;
+}
+td.righttabmenuheader {
+	vertical-align: middle;
+	padding-bottom: 0px;
+	position: static;
+	text-align: center;
+	width: 150;
+	background: url("../../images/tab.png") no-repeat top right;
+	cursor: pointer;
+}
+td.content {
+	vertical-align: top;
+	padding-left: 0px;
+	padding-top: 20px;
+	padding-right: 0px;
+	padding-bottom: 9px;
+	height: 50px;
+	width:540px;
+	position: inherit;
+}
+fieldset {
+ 	margin-left: 10px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	padding-top: 0px;
+ 	margin-right: 10px;
+	border: 1px solid #d0d0d0;
+ 	/*border-top: 1px solid #d0d0d0;
+ 	border-bottom: none;
+ 	border-left: none;
+ 	border-right: none;*/
+}
+div.group5 fieldset {
+ 	margin-left: 10px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	padding-top: 0px;
+ 	margin-right: 20px;
+ 	border-top: 1px solid #d0d0d0;
+ 	border-bottom: none;
+ 	border-left: none;
+ 	border-right: none;
+}
+div.group5 legend {
+  	margin-bottom: 10px;
+  	margin-left: -9px;
+  	padding-right: 10px;
+  	vertical-align: middle;
+  	padding-left: 2px;
+}
+*:first-child+html legend {
+	margin-top: 3px;
+  	margin-bottom: 10px;
+  	margin-left: 10px;
+  	padding-right: 10px;
+  	vertical-align: middle;
+  	padding-left: 2px;
+}
+legend {
+  	margin-bottom: 5px;
+  	margin-left: 10px;
+	margin-top: 0px;
+  	padding-right: 10px;
+  	vertical-align: middle;
+  	padding-left: 2px;
+}
+input.textinput {
+	border: 2px inset #ECE9D8;
+	margin: 0 7px 0 -1px;
+	padding: 1px 0 1px 0;
+}
+.style1 {color: #FF0000}
+.style2 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style3 {color: #3875d7;}
+*:first-child+html table.cusinfo  {
+  	margin-top: -2px;
+  	margin-left: 10px;
+  	padding-right: 10px;
+  	vertical-align: top;
+  	padding-left: 0px;
+}
+*:first-child+html table.cusinfo1  {
+  	margin-top: -2px;
+  	margin-left: 10px;
+  	padding-right: 10px;
+  	vertical-align: middle;
+  	padding-left: 0px;
+}
+table.cusinfo {
+	border-spacing: 2px 2px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+*:first-child+html table.cusinfo td{
+  	margin-left: 0px;
+  	padding-right: 10px;
+  	vertical-align: middle;
+  	padding-left: 0px;
+	height: 25px;
+}
+table.cusinfo td{
+	height: 25px;
+	padding-left: 10px;
+  	padding-right: 10px;
+  	vertical-align: middle;
+}
+table.cusinfo td.cc{
+	height: 0px;
+	padding-left: 0px;
+}
+table.cusinfo select {width: 115px;}
+table.cusinfo td.ccspecific {padding-left: 0px;text-align: left;}
+table.cusinfo td.ccspecific select {width: 70px;}
+table.cusinfo input {width: 110px;}
+table.cusinfo input.checkbox {width: auto;}
+table.cusinfo input.button {width: auto;}
+table.cusinfo td.ccinfo{
+	height: 0px;
+  	padding-right: 0px;
+	padding-left: 0px;
+}
+table.cusinfo td.ccinfo select{
+	position: relative;
+	width: 100px;
+}
+table.cusinfo1  {
+	border-spacing: 2px 2px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+*:first-child+html table.cusinfo1 td{
+  	margin-left: 0px;
+  	padding-right: 10px;
+  	vertical-align: middle;
+  	padding-left: 0px;
+	height: 25px;
+}
+table.cusinfo1 td{
+	height: 25px;
+	padding-left: 10px;
+  	padding-right: 10px;
+  	vertical-align: middle;
+}
+table.cusinfo1 td.cc{
+	height: 0px;
+	padding-left: 0px;
+}
+table.cusinfo1 select {width: 115px;}
+table.cusinfo1 input {width: 110px;}
+table.cusinfo1 input.checkbox {width: auto;}
+table.cusinfo1 input.button {width: auto;}
+div.group1 {width: 540px;margin-top:-5px;margin-right:0px;}
+div.group2 {width: 540px;margin-top:-15px;margin-right:0px;}
+div.trf {padding-left: 10px;}
+td.comment {
+	vertical-align: top;
+	text-align: left;
+	padding-left: 0px;
+	padding-top: 20px;
+	padding-bottom: 9px;
+	position: inherit;
+}
+div.group3 {margin-top:-5px;margin-left:0px;margin-right:10px;}
+div.group4 {
+	margin: 0 0 0 5px;
+}
+*:first-child+html div.group4 {
+	margin-top:10px;
+	width: 100%;
+	margin-left:0px;
+	margin-right:0px;}
+textarea.bcomment {margin-left: 0px;margin-right:15px;width:90%;}
+table.comment { 
+	text-align:center;
+	vertical-align:middle;
+	margin-left: 0px;
+	margin-right:0px;}
+table.comment td.sort {
+	border: 1px solid #FFFFFF; 
+	border-left: none;
+	border-collapse: collapse;
+	height: 22px;
+	width: 100px;
+	background-color: #abbeff;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: left;
+	font-weight: bold;
+}
+table.comment td.mainthead {
+	border: 1px solid #FFFFFF; 
+	border-left: none;
+	border-collapse: collapse;
+	height: 20px;
+	background-color: #d6dff7;
+	padding-left: 10px;
+	vertical-align: middle;
+	text-align: left;
+	font-weight: bold;
+}
+table.comment td{ 
+	height:20px; 
+	text-align: left; 
+	padding-left: 10px; 
+	padding-right: 10px; 
+	vertical-align: top;
+	border: 1px solid #FFFFFF; 
+	border-left: none;
+	border-collapse: collapse;
+}
+table.comment tr.content_list {
+	background-color:#ffffff;
+	height: 20px;
+}
+table.comment tr.content_list1 {
+	background-color:#efefef;
+	height: 20px;
+}
+div.comment {
+	overflow: auto;
+	overflow-x:hidden;
+	height:300px;
+	position: relative;
+	padding: 0px 0px 0px 0px;
+	margin-left: 10px;
+	/*width: 400px;*/
+	margin-right:10px;
+}
+div.hiddenbar {
+	position: absolute;
+  	left: 50%;
+  	bottom: 0%;
+  	cursor: pointer;
+}
+a.worksheet {
+	overflow: hidden;
+	color: #FF0000;
+}
+a.worksheet:link {
+	text-decoration: none;
+	font-weight:normal;
+	color: #FF0000;
+	cursor: pointer;
+}
+a.worksheet:hover {
+	text-decoration: none;
+	font-weight:normal;
+	color: #FF0000;
+	cursor: pointer;
+}
+a.worksheet:visited {
+	text-decoration: none;
+	font-weight:normal;
+	color: #FF0000;
+	cursor: pointer;
+}
+.membercategory {
+	font-size: 20px;
+	font-weight: bold;
+	color: #FF0000;
+}
+.cancelbooking {
+	font-size: 28px;
+	font-weight: bold;
+	color: #FF0000;
+}
+
+
+h2 {
+	font: bold 14px Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	margin: 0px;
+	padding: 0px 0px 0px 15px;
+}
+ h2 {
+        font: bold 14px Verdana, Arial, Helvetica, sans-serif;
+        color: #000;
+        margin: 0px;
+        padding: 0px 0px 0px 15px;
+}
+
+/*- Menu Tabs--------------------------- */
+
+
+    #tabs {
+      width:auto;
+	  background-color:#d6dff7;
+	  background:#d6dff7;
+      font-size:93%;
+      line-height:normal;
+      }
+    #tabs ul {
+        margin:0;
+        padding:10px 10px 0 10px;
+        list-style:none;
+      }
+    #tabs li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabs a {
+      float:left;
+      background:url("/images/tableft.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabs a span {
+      float:left;
+      display:block;
+      background:url("/images/tabright.gif") no-repeat right top;
+      padding:5px 10px 4px 6px;
+      color:#666666;
+      font: bold 9px/1.5em Verdana;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabs a span {float:none;font: bold 10px Verdana;color:#9a988d;}
+    /* End IE5-Mac hack */
+    #tabs a:hover span {
+    	color: #ff0000;
+      /*color:#FF9834;*/
+      }
+    #tabs a:hover {
+      /*background-position:0% -42px;*/
+      }
+    #tabs a:hover span {
+     /* background-position:100% -42px;*/
+      }
+
+        #tabs .current a {
+                background-position:0% -42px;
+        }
+        #tabs .current a span {
+                background-position:100% -42px;color:#ff0000;
+        }
+ /*-------------------- sales receipt log css --------------------------*/
+div.log fieldset {
+	border: 1px solid #d0d0d0;
+}
+div.log legend {
+  	margin-left: 10px;
+  	vertical-align: middle;
+}
+div.log {
+  	margin-left: -30px;
+  	vertical-align: middle;
+}
+div.loginner {
+	margin-top: 5px;
+	overflow: auto;
+	height: 200px;
+	position: relative;
+}
+div.loginner table{
+	margin: 20px;margin-top: 0px;
+}
